@@ -48,7 +48,9 @@ main{
   z-index: 999;
 }
 /* nav all'interno del contenitore */
-
+.content_nav{
+  margin-top: 90px;
+}
 /* footer */
 footer{
     display: flex;
