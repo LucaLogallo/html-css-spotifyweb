@@ -19,7 +19,7 @@ main{
 /* contenitore del main */
 
 .content{
-  width: calc(100% - 230px);
+  width: calc(100vw - 230px);
   height: calc(100vh - 90px);
   background-color: red;
   overflow-y: auto;
@@ -27,7 +27,7 @@ main{
 /* elemento fixed del content */
 .upgrade{
   position: fixed;
-  width: 100%;
+  width: calc(100% - 230px);
   height: 90px;
   display: flex;
   flex-direction: row-reverse;
@@ -51,6 +51,10 @@ main{
 .content_nav{
   margin-top: 90px;
 }
+
+
+
+
 /* footer */
 footer{
     display: flex;
