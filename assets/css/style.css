@@ -28,13 +28,76 @@
   float: left;
 }
 
+main{
+  width: 100%;
+  height: calc(100vh - 90px);
+}
 /* navbar laterale */
 
 .nav_laterale{
   width: 230px;
-  height: calc(100vh - 90px);
+  height: 100%;
   background-color: black;
 }
+/* parte superiore della navbar laterale */
+.s_nav_top{
+  width: 100%;
+  height: calc(100% - 80px);
+}
+/* logo normale */
+.nav_logo{
+  height: 90px;
+  background-color: red;
+}
+/* logo mobile */
+.nav_lm{
+  display: none;
+}
+
+main .nav_laterale .s_nav_top ul{
+  list-style:none;
+}
+main .nav_laterale .s_nav_top ul li{
+  height: 30px;
+  position: relative;
+}
+
+main .nav_laterale .s_nav_top ul li i{
+  line-height: 26px;
+  margin-right: 7px;
+  margin-left: 7px;
+}
+
+main .nav_laterale .s_nav_top ul li span{
+  line-height: 26px;
+}
+
+main .nav_laterale .s_nav_top ul li:hover .barra_green{
+  display: block;
+}
+
+main .nav_laterale .s_nav_top ul li .barra_green{
+  height: 30px;
+  width: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  background-color: #adff2f;
+}
+
+
+
+
+
+/* parte inferiore della navbar laterale */
+.s_nav_botton{
+  width: 100%;
+  height: 80px;
+  background-color: white;
+}
+
+
 /* /navbar laterale */
 
 /* contenitore del main */
@@ -55,6 +118,7 @@
   display: flex;
   justify-content: flex-end;
   background-color: rgba(0,0,0,0.5);
+  flex-shrink: 0;
 }
 
 .upgrade button{
@@ -93,7 +157,7 @@
   color: #7d7f84;
 }
 
-.barra_green{
+main .content .content_nav ul li .barra_green{
   position: absolute;
   bottom: 0;
   left: calc(50% - 15px);
@@ -202,3 +266,16 @@ footer .footer-left .titolo-brano{
   0% {left: 0;}
   100% {left: 85%;}
   }
+
+
+/* footer center */
+footer .footer-center{
+  flex: row;
+}
+footer .footer-center ul{
+  list-style:none;
+}
+
+footer .footer-center ul li{
+  display: inline-block;
+}
