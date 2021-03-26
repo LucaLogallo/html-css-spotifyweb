@@ -113,8 +113,14 @@ main .nav_laterale .s_nav_top ul li .barra_green{
   background-color: #adff2f;
 }
 
+/* sezione con il crea playlist */
+main .nav_laterale{
+  overflow: hidden;
+}
 
-
+main .nav_laterale .s_nav_top .playlist_name{
+  overflow-y: auto;
+}
 
 /* parte inferiore della navbar laterale */
 .s_nav_botton{
