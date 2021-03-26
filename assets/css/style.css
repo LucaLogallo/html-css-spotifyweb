@@ -8,6 +8,14 @@
   margin-right: 10px;
 }
 
+.margin_left10{
+  margin-left: 10px;
+}
+
+.margin_left20{
+  margin-left: 20px;
+}
+
 /* colori */
 .colorebianco{
   color: #fff;
@@ -45,24 +53,39 @@ main{
   height: calc(100% - 80px);
 }
 /* logo normale */
+.nav_lg{
+  width: 75%;
+}
 .nav_logo{
+  width: 100%;
   height: 90px;
   background-color: red;
+  padding: 20px;
 }
 /* logo mobile */
 .nav_lm{
+  width: 75%;
   display: none;
 }
 
+/* primo menu con le immagini "home, cerca e libreria */
 main .nav_laterale .s_nav_top ul{
   list-style:none;
 }
 main .nav_laterale .s_nav_top ul li{
-  height: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
   position: relative;
+  margin-top: 5px;
+  color:#515151;
+}
+main .nav_laterale .s_nav_top ul li img{
+  width: 26px;
+  height: 26px;
 }
 
-main .nav_laterale .s_nav_top ul li i{
+main .nav_laterale .s_nav_top ul li a{
   line-height: 26px;
   margin-right: 7px;
   margin-left: 7px;
@@ -76,6 +99,10 @@ main .nav_laterale .s_nav_top ul li:hover .barra_green{
   display: block;
 }
 
+main .nav_laterale .s_nav_top ul li:hover {
+  color: #FFF;
+}
+
 main .nav_laterale .s_nav_top ul li .barra_green{
   height: 30px;
   width: 2px;
@@ -85,7 +112,6 @@ main .nav_laterale .s_nav_top ul li .barra_green{
   display: none;
   background-color: #adff2f;
 }
-
 
 
 
@@ -157,7 +183,7 @@ main .nav_laterale .s_nav_top ul li .barra_green{
   color: #7d7f84;
 }
 
-main .content .content_nav ul li .barra_green{
+main .content .content_nav ul li .barra_green2{
   position: absolute;
   bottom: 0;
   left: calc(50% - 15px);
@@ -167,7 +193,7 @@ main .content .content_nav ul li .barra_green{
   display: none;
 }
 
-.content_nav ul li:active .barra_green{
+main .content .content_nav ul li:active .barra_green2{
   display: block;
 }
 /* /SELEZIONE */
@@ -278,4 +304,42 @@ footer .footer-center ul{
 
 footer .footer-center ul li{
   display: inline-block;
+}
+
+
+
+
+
+
+
+/* media query */
+
+/* media query della nav laterale */
+@media (max-width: 600px) {
+  main .nav_laterale .s_nav_top .nav_logo{
+    padding: 5px;
+    height: auto;
+  }
+  main .nav_laterale .s_nav_top .nav_logo .nav_lm{
+    display:block;
+    margin-left: 6px;
+  }
+  main .nav_laterale .s_nav_top .nav_logo .nav_lg{
+    display: none;
+  }
+  main .nav_laterale {
+    width: 50px;
+  }
+  main .content, main .content .upgrade{
+    width: calc(100% - 50px);
+  }
+
+  main .nav_laterale .s_nav_top ul li img{
+    margin-left: 12px;
+  }
+
+  main .nav_laterale .s_nav_top ul li a{
+    display: none;
+  }
+
 }
