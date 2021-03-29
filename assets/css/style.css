@@ -276,6 +276,8 @@ main .nav_laterale .s_nav_botton .installa_app span:hover{
 .content .content_nav ul{
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .content .content_nav ul li{
   padding: 10px;
@@ -467,10 +469,4 @@ footer .footer-center ul li{
     margin-left: 15px;
   }
   /* /menu laterale */
-
-  /* content nav */
-  main .content .content_nav ul{
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
