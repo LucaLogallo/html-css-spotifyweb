@@ -257,6 +257,10 @@ main .nav_laterale .s_nav_botton .installa_app span:hover{
   margin-top: 22px;
   cursor: pointer;
 }
+
+.upgrade button:hover{
+  transform: scale(1.1,1.1);
+}
 /* /TOP MAIN FIXATO */
 
 /* SELEZIONE */
@@ -445,4 +449,28 @@ footer .footer-center ul li{
     display: none;
   }
 
+  main .nav_laterale .s_nav_botton span{
+    display: none;
+  }
+
+  main .nav_laterale .s_nav_botton .installa_app{
+    border: none;
+  }
+
+  main .nav_laterale .s_nav_botton{
+    padding: 0;
+  }
+  main .nav_laterale .s_nav_botton .profile .img_profile{
+    margin-left: 12px;
+  }
+  main .nav_laterale .s_nav_botton .installa_app .far.fa-arrow-alt-circle-down{
+    margin-left: 15px;
+  }
+  /* /menu laterale */
+
+  /* content nav */
+  main .content .content_nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
