@@ -16,6 +16,13 @@
   margin-left: 20px;
 }
 
+.margin_botton10{
+  margin-bottom: 10px;
+}
+.margin_botton20{
+  margin-bottom: 20px;
+}
+
 /* colori */
 .colorebianco{
   color: #fff;
@@ -38,6 +45,7 @@
 
 main{
   width: 100%;
+  min-height: 40vh;
   height: calc(100vh - 90px);
 }
 /* navbar laterale */
@@ -50,7 +58,9 @@ main{
 /* parte superiore della navbar laterale */
 .s_nav_top{
   width: 100%;
+  min-height: 40%;
   height: calc(100% - 80px);
+  overflow: hidden;
 }
 /* logo normale */
 .nav_lg{
@@ -117,11 +127,24 @@ main .nav_laterale .s_nav_top ul li .barra_green{
 main .nav_laterale{
   overflow: hidden;
 }
+/* ricordarsi di cambiare e di dare una classe all'ul e di dargli un'altezza in percentuale rispetto al padre in modo da dargli l'overflowy e di far apparire la scrollbar laterale E' POSSIBILE RISOLVERE IL PROBLEMA CON FLEX
+attenzione 
+AL CONTENITORE SNAV TOP DARE UN ALTEZZA DI TOT PIXEL - SNAV BOTTOM E POI DARE UNA GRANDEZZA IN PERCENTUALE ALL'UL
+*/
+main .nav_laterale .s_nav_top .playlist{
+  height: 80%;
+  overflow: hidden;
+  background-color: aqua;
+}
 
-main .nav_laterale .s_nav_top .playlist_name{
+main .nav_laterale .s_nav_top .playlist .playlist_name{
+  height: 80%;
   overflow-y: auto;
 }
 
+main .nav_laterale .s_nav_top .playlist .playlist_name ul li span{
+  margin-left: 20px;
+} 
 /* parte inferiore della navbar laterale */
 .s_nav_botton{
   width: 100%;
@@ -345,6 +368,10 @@ footer .footer-center ul li{
   }
 
   main .nav_laterale .s_nav_top ul li a{
+    display: none;
+  }
+
+  main .nav_laterale .s_nav_top .playlist{
     display: none;
   }
 
