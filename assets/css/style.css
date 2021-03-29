@@ -1,5 +1,6 @@
 
 /* generali */
+/* margini e padding */
 .margin_right20{
   margin-right: 20px;
 }
@@ -23,10 +24,20 @@
   margin-bottom: 20px;
 }
 
+.margin_top5{
+  margin-top: 5px;
+}
+
 /* colori */
 .colorebianco{
   color: #fff;
 }
+.coloregrigio{
+  color: #878787;
+}
+
+
+/* /colori */
 *{
   margin: 0;
   padding: 0;
@@ -58,10 +69,11 @@ main{
 /* parte superiore della navbar laterale */
 .s_nav_top{
   width: 100%;
-  min-height: 40%;
+  min-height: 400px;
   height: calc(100% - 80px);
   overflow: hidden;
 }
+
 /* logo normale */
 .nav_lg{
   width: 75%;
@@ -132,26 +144,84 @@ attenzione
 AL CONTENITORE SNAV TOP DARE UN ALTEZZA DI TOT PIXEL - SNAV BOTTOM E POI DARE UNA GRANDEZZA IN PERCENTUALE ALL'UL
 */
 main .nav_laterale .s_nav_top .playlist{
-  height: 80%;
+  height: 40%;
   overflow: hidden;
-  background-color: aqua;
 }
 
 main .nav_laterale .s_nav_top .playlist .playlist_name{
-  height: 80%;
+  height: 70%;
   overflow-y: auto;
 }
 
-main .nav_laterale .s_nav_top .playlist .playlist_name ul li span{
-  margin-left: 20px;
-} 
-/* parte inferiore della navbar laterale */
-.s_nav_botton{
-  width: 100%;
-  height: 80px;
-  background-color: white;
+main .nav_laterale .s_nav_top .playlist .playlist_name ul{
+  height: 80%;
 }
 
+main .nav_laterale .s_nav_top .playlist .playlist_name ul li span {
+  margin-left: 20px;
+} 
+
+
+/* quadratino con il + */
+main .nav_laterale .s_nav_top .playlist .New_p::before{
+  content: "+";
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  vertical-align: middle;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+main .nav_laterale .s_nav_top .playlist .New_p:hover::before{
+  background-color: #FFF;
+}
+/* parte inferiore della navbar laterale */
+main .nav_laterale .s_nav_botton{
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+}
+
+main .nav_laterale .s_nav_botton .installa_app{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #515151;
+}
+main .nav_laterale .s_nav_botton .profile{
+  display: flex;
+}
+main .nav_laterale .s_nav_botton .profile .img_profile{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #515151;
+  overflow: hidden;
+}
+
+main .nav_laterale .s_nav_botton .profile .img_profile img{
+  width: 100%;
+}
+main .nav_laterale .s_nav_botton .profile span{
+  line-height: 24px;
+  font-weight: 700;
+}
+
+main .nav_laterale .s_nav_botton .installa_app i:hover{
+  color: #FFF;
+  cursor: pointer;
+}
+
+main .nav_laterale .s_nav_botton .installa_app span:hover{
+  color: #FFF;
+  cursor: pointer;
+}
 
 /* /navbar laterale */
 
@@ -269,7 +339,7 @@ footer .footer-left .titolo-brano{
 }
 
 
-
+/* footer center */
 
 
 .container {
