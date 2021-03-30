@@ -17,15 +17,23 @@
   margin-left: 20px;
 }
 
-.margin_botton10{
+.margin_bottom10{
   margin-bottom: 10px;
 }
-.margin_botton20{
+.margin_bottom20{
   margin-bottom: 20px;
+}
+
+.margin_bottom30{
+  margin-bottom: 30px;
 }
 
 .margin_top5{
   margin-top: 5px;
+}
+
+.margin_top30{
+  margin-top: 30px;
 }
 
 /* colori */
@@ -187,20 +195,20 @@ main .nav_laterale .s_nav_top .playlist .New_p:hover::before{
   background-color: #FFF;
 }
 /* parte inferiore della navbar laterale */
-main .nav_laterale .s_nav_botton{
+main .nav_laterale .s_nav_bottom{
   width: 100%;
   height: 80px;
   padding: 20px;
 }
 
-main .nav_laterale .s_nav_botton .installa_app{
+main .nav_laterale .s_nav_bottom .installa_app{
   padding-bottom: 5px;
   border-bottom: 1px solid #515151;
 }
-main .nav_laterale .s_nav_botton .profile{
+main .nav_laterale .s_nav_bottom .profile{
   display: flex;
 }
-main .nav_laterale .s_nav_botton .profile .img_profile{
+main .nav_laterale .s_nav_bottom .profile .img_profile{
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -209,20 +217,20 @@ main .nav_laterale .s_nav_botton .profile .img_profile{
   overflow: hidden;
 }
 
-main .nav_laterale .s_nav_botton .profile .img_profile img{
+main .nav_laterale .s_nav_bottom .profile .img_profile img{
   width: 100%;
 }
-main .nav_laterale .s_nav_botton .profile span{
+main .nav_laterale .s_nav_bottom .profile span{
   line-height: 24px;
   font-weight: 700;
 }
 
-main .nav_laterale .s_nav_botton .installa_app i:hover{
+main .nav_laterale .s_nav_bottom .installa_app i:hover{
   color: #FFF;
   cursor: pointer;
 }
 
-main .nav_laterale .s_nav_botton .installa_app span:hover{
+main .nav_laterale .s_nav_bottom .installa_app span:hover{
   color: #FFF;
   cursor: pointer;
 }
@@ -322,13 +330,15 @@ main .content .content_nav ul li:active .barra_green2{
 }
 
 .row ul li{
+  width: calc(100% / 6);
   padding: 10px;
   text-align: center;
   color: #FFF;
 }
 
 .row ul li img{
-  width: 180px;
+  width: 80%;
+  margin: auto;
 }
 
 .row:last-of-type ul li img{
@@ -481,21 +491,21 @@ footer .footer-center ul li{
     display: none;
   }
 
-  main .nav_laterale .s_nav_botton span{
+  main .nav_laterale .s_nav_bottom span{
     display: none;
   }
 
-  main .nav_laterale .s_nav_botton .installa_app{
+  main .nav_laterale .s_nav_bottom .installa_app{
     border: none;
   }
 
-  main .nav_laterale .s_nav_botton{
+  main .nav_laterale .s_nav_bottom{
     padding: 0;
   }
-  main .nav_laterale .s_nav_botton .profile .img_profile{
+  main .nav_laterale .s_nav_bottom .profile .img_profile{
     margin-left: 12px;
   }
-  main .nav_laterale .s_nav_botton .installa_app .far.fa-arrow-alt-circle-down{
+  main .nav_laterale .s_nav_bottom .installa_app .far.fa-arrow-alt-circle-down{
     margin-left: 15px;
   }
   /* /menu laterale */
