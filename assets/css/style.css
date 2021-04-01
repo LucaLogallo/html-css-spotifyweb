@@ -32,8 +32,16 @@
   margin-top: 5px;
 }
 
+.margin_top10{
+  margin-top: 10px;
+}
+
 .margin_top30{
   margin-top: 30px;
+}
+
+.margin-10{
+  margin: 0 10px;
 }
 
 /* colori */
@@ -54,6 +62,7 @@
 
 body{
   min-width: 599px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .clearfix::after{
@@ -93,7 +102,6 @@ main{
 .nav_logo{
   width: 100%;
   height: 90px;
-  background-color: red;
   padding: 20px;
 }
 /* logo mobile */
@@ -242,8 +250,8 @@ main .nav_laterale .s_nav_bottom .installa_app span:hover{
 .content{
   width: calc(100% - 230px);
   height: calc(100vh - 90px);
-  background-color: red;
   overflow-y: auto;
+  background-color: #141922;
 }
 
 /* TOP MAIN FIXATO */
@@ -280,7 +288,6 @@ main .nav_laterale .s_nav_bottom .installa_app span:hover{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: coral;
   padding: 10px;
   margin-top: 90px;
 }
@@ -310,42 +317,97 @@ main .content .content_nav ul li .barra_green2{
   display: none;
 }
 
-main .content .content_nav ul li:active .barra_green2{
+main .content .content_nav ul li:hover .barra_green2{
   display: block;
 }
 /* /SELEZIONE */
 
 /* CONTENITORE */
 /* ROW CON GLI ALBUM */
-.row{
-  width: 100%;
- /*  height: 300px; */
-  background-color: #adff2f;
+main .content .album .covers-row > p{ 
+  margin-top: 10px;
 }
-
-.row ul {
+main .content .album .covers-row{
+  margin: 20px;
+}
+main .content .album .lista_cover{
   display: flex;
+  margin: 30px 0;
+}
+main .content .album .lista_cover .cover-item{
+  flex-shrink: 0;
+  width: calc(100% / 6 - 15px);
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  main .content .album .lista_cover .cover-item{
+    width: calc(100% / 4 - 10px);
+    margin-right: 10px;
+  }
+  main .content .album .lista_cover{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 700px){
+  main .content .album .lista_cover .cover-item{
+    width: calc(100% / 2 - 10px);
+    margin-right: 10px;
+  }
+}
+ul{
   list-style: none;
-  flex-wrap: wrap;
 }
 
-.row ul li{
-  width: calc(100% / 6);
-  padding: 10px;
+main .content .album .lista_cover .cover-item .container-cover{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+main .content .album .lista_cover .cover-item .container-cover .opaco{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* allineo icona con flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 60px;
+}
+main .content .album .lista_cover .cover-item .container-cover .opaco i{
+  display: none;
+}
+main .content .album .lista_cover .cover-item:hover .container-cover .opaco{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+main .content .album .lista_cover .cover-item:hover .container-cover .opaco i{
+  display: inline;
+}
+main .content .album .lista_cover .cover-item .text-cover{
   text-align: center;
-  color: #FFF;
+}
+main .content .album .covers-row .lista_cover .cover-item .text-cover h3{
+  font-size: 16px;
+  line-height: 16px;
+}
+main .content .album .covers-row .lista_cover .cover-item .container-cover img{
+  max-width: 100%;
 }
 
-.row ul li img{
-  width: 80%;
-  margin: auto;
+main .content .album #Artisti_più_popolari .lista_cover .cover-item .container-cover img{
+  border-radius: 100%;
 }
 
-.row:last-of-type ul li img{
-  border-radius: 50%;
+#Artisti_più_popolari .lista_cover .cover-item .container-cover .opaco{
+  border-radius: 100%;
 }
+
 /* footer */
-footer {
+/* footer {
   display: flex;
   justify-content: space-between;
   height: 90px;
@@ -367,7 +429,6 @@ footer .icon {
   height: 100%;
   padding: 14px 0;
   cursor: pointer;
-  /* margin: 0 15px; */
 }
 footer .footer-left .titolo-brano{
   display: flex;
@@ -376,19 +437,18 @@ footer .footer-left .titolo-brano{
 }
 .icon img {
   width: 75%;
- /* height: 100%;  */
   object-fit: cover;
 }
 .min_album{
   width: 61px;
   margin: 0 5px;
-}
+} */
 
 
 /* footer center */
 
 
-.container {
+/* .container {
   position:relative;
   margin: 100px auto;
   width: 150px;
@@ -437,10 +497,10 @@ footer .footer-left .titolo-brano{
   0% {left: 0;}
   100% {left: 85%;}
   }
-
+ */
 
 /* footer center */
-footer .footer-center{
+/* footer .footer-center{
   flex: row;
 }
 footer .footer-center ul{
@@ -450,8 +510,106 @@ footer .footer-center ul{
 footer .footer-center ul li{
   display: inline-block;
 }
+ */
 
 
+
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  background-color: #282828;
+}
+
+.footer-left, .footer-right, .footer-center{
+  display: flex;
+  flex-shrink: 0;
+}
+
+
+
+footer .footer-left .titolo-brano{
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+footer .footer-left .icon,
+footer .footer-center .icon,
+footer .footer-right .icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  height: 100%;
+  cursor: pointer;
+  justify-content: center;
+}
+
+footer .footer-left .icon .cartella{
+  margin-left: 15px;
+}
+
+.icona img {
+  width: 75%;
+  object-fit: cover;
+  margin-top: 15px;
+  margin-left: 10px;
+
+}
+.min_album{
+  width: 60px;
+  margin: 0 5px;
+}
+
+footer .footer-center .icon,
+footer .footer-right .icon{
+  margin-right: 15px;
+}
+
+.fa-play-circle{
+  font-size: 30px;
+}
+
+footer .footer-right .volume{
+  width: 100px;
+  height: 5px;
+  background-color:#5A5A5A ;
+  margin-left: 5px;
+  border-radius: 2px;
+}
+
+.footer-center{
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer-center .tempo-musica{
+  width: 80%;
+  height: 5px;
+  background-color:#5A5A5A ; 
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+footer .footer-center .tempo-musica .minuti-musica{
+  width: 20%;
+  height: 5px;
+  background-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+footer .footer-right .volume .vol-musica{
+  width: 25%;
+  height: 5px;
+  background-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
 
 
 
@@ -511,5 +669,14 @@ footer .footer-center ul li{
   /* /menu laterale */
   .row .album li img{
     width: 250px;
+  }
+
+
+  /* footer */
+  footer .footer-left .icon{
+    flex-direction: column;
+  }
+  footer .footer-left .icon .cartella {
+    margin-left: 5px;
   }
 }
